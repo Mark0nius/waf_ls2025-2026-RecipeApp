@@ -1,0 +1,17 @@
+services:
+  web:
+    build:
+      context: .
+      args:
+        NEXT_PUBLIC_MEALDB_API_KEY: "65232507"
+    env_file:
+      - .env
+      - .env.local
+    environment:
+      AUTH_TRUST_HOST: "true"
+      AUTH_URL: "http://localhost:3000"
+      NEXTAUTH_URL: "http://localhost:3000"
+      OLLAMA_BASE_URL: "http://host.docker.internal:11434"
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
