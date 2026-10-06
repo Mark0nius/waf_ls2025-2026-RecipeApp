@@ -23,6 +23,7 @@ OLLAMA_MODEL=gemma3                      # default; also works with llama3.2, gr
 ---
 
 ## how to run
+node.js needed
 
 cd .\frontendprojekt\
 
